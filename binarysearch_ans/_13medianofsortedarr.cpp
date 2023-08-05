@@ -58,7 +58,8 @@ double findmedianofsortedArr(vector<int> arr1, vector<int> arr2){
 
 int main(){
     int n, m;
-    cin>>n>>m;
+    cin>>n;
+    cin>>m;
     vector<int> vec1(n), vec2(m);
     for(int i=0; i<n; i++)
         cin>>vec1[i];
