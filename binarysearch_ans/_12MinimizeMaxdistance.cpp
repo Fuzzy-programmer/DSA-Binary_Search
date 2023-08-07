@@ -41,7 +41,7 @@ long double minmizemaxdistb2wgasstations(vector<int> vec, int k){
         int secIdx=tp.second;   
         howmany[secIdx]++;
 
-        long double newsecdiff=(vec[secIdx+1]-vec[secIdx])/(long double)(howmany[secIdx]+1);
+        long double newsecdiff=(long double)tp.first/(long double)(howmany[secIdx]+1);
 
         pq.push({newsecdiff, secIdx});
     }
@@ -54,7 +54,7 @@ int numberofGasStationsReqerd(long double dist, vector<int> arr){
     int cnt=0;
     for(int i=1; i<arr.size(); i++){
         int numbersinbtw= (arr[i]-arr[i-1])/(dist);
-        if((arr[i]-arr[i-1])/dist == numbersinbtw*dist)
+        if((arr[i]-arr[i-1]) == numbersinbtw*dist)
             numbersinbtw--;
         
         cnt+=numbersinbtw;
